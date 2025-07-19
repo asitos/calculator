@@ -4,9 +4,22 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #eee;
+    background-color: #dee2ff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+h1 {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(24px, 8vw, 48px);
+    color: #f72585;
+    background-color: #fae1dd;
+    padding: 12px 24px;
+    border-radius: 24px;
+    border: 20px;
+    border-style:double;
+}
 .footer {
     display: flex;
     justify-content: center;
@@ -23,8 +36,124 @@ body {
 
 .calculator {
     min-width: 400px;
-    border: 2px solid black;
+    border: 8px solid #ff99c8;
+    border-style: outset;
     border-radius: 24px;
-    min-height: 600px;
-    margin-top: 28px;
+    min-height: 720px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffcad4;
 }
+
+.input-field {
+    min-width: 380px;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.input {
+    min-width: 380px;
+    max-width: 380px;
+    height: 100px;
+    margin: 16px 0 12px 0;
+    background-color: #dadada;
+    border-radius: 12px;
+    border: 4px;
+    border-style: inset;
+    border-color: #ff99c8;
+    font-size: 48px;
+    line-height:108px;
+    padding-right: 12px;
+    text-align: end;
+
+}
+/* show user input on the right side later */
+
+.input-history {
+    margin-bottom: 4px;
+    font-size: 28px;
+}
+
+.clear-delete-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 424px;
+    /* background-color: aliceblue; */
+}
+
+.clear-btn, .delete-btn {
+    padding: 24px 48px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    font-size: 28px;
+    border-width: 4px;
+    border-style: outset;
+}
+
+.clear-btn {
+    background-color: #fb6376;
+    border-color: #e5383b;
+
+}
+.delete-btn {
+    background-color: #d4bbfc;
+    border-color: #9a99f2;
+}
+
+.button-grid {
+    min-width: 424px;
+    /* background-color: aliceblue; */
+}
+
+.row-1, .row-2, .row-3, .row-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+.button-grid button {
+    min-width: 84px;
+    min-height: 84px;
+    border-radius: 200px;
+    font-size: 32px;
+    background-color: #b2f7ef;
+    border-width: 4px;
+    border-color: #7bdff2;
+    border-style: outset;
+}
+
+.division, .multiplication, .subtraction, .addition, .equals, .decimal {
+    border-radius: 20px !important;
+    font-size: 42px !important; 
+    background-color: #c7f9cc !important;
+    border-color: #80ed99 !important;
+}
+
+.subtraction {
+    padding-bottom: 12px !important;
+}
+
+.division, .multiplication {
+    padding-bottom: 4px !important;
+}
+
+.equals {
+    background-color: #ffd289 !important;
+    border-color: #ffc15e !important;
+}
+
+.decimal {
+    background-color: #ffee99 !important;
+    border-color: #ffe14c !important;
+    border-radius: 32px !important;
+}
+
