@@ -101,12 +101,27 @@ h1 {
 .clear-btn {
     background-color: #fb6376;
     border-color: #e5383b;
-
+    transition: background-color 0.3s transform 0.3s;
 }
+
 .delete-btn {
     background-color: #d4bbfc;
     border-color: #9a99f2;
 }
+
+.clear-delete-buttons button:hover {
+    transform: scale(1.02);
+    border-style: inset;
+}
+
+.clear-btn:hover {
+    background-color: #e5383b;
+}
+
+.delete-btn:hover {
+    background-color: #9a99f2;
+}
+
 
 .button-grid {
     min-width: 424px;
@@ -129,6 +144,13 @@ h1 {
     border-width: 4px;
     border-color: #7bdff2;
     border-style: outset;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth effect */
+}
+
+.button-grid button:hover {
+    background-color: #7bdff2; /* Darken the color on hover */
+    transform: scale(1.02); 
+    border-style: inset; /* Change border style on hover */
 }
 
 .division, .multiplication, .subtraction, .addition, .equals, .decimal {
@@ -136,6 +158,10 @@ h1 {
     font-size: 42px !important; 
     background-color: #c7f9cc !important;
     border-color: #80ed99 !important;
+}
+
+.division:hover, .multiplication:hover, .subtraction:hover, .addition:hover {
+    background-color: #80ed99 !important;
 }
 
 .subtraction {
@@ -151,9 +177,16 @@ h1 {
     border-color: #ffc15e !important;
 }
 
+.equals:hover {
+    background-color: #ffc15e !important;
+}
+
 .decimal {
     background-color: #ffee99 !important;
     border-color: #ffe14c !important;
     border-radius: 32px !important;
 }
 
+.decimal:hover {
+    background-color: #ffe14c !important;
+}
