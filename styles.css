@@ -96,12 +96,12 @@ h1 {
     font-size: 28px;
     border-width: 4px;
     border-style: outset;
+    transition: background-color 0.3s, transform 0.3s, border-style 0.3s;
 }
 
 .clear-btn {
     background-color: #fb6376;
     border-color: #e5383b;
-    transition: background-color 0.3s transform 0.3s;
 }
 
 .delete-btn {
@@ -114,14 +114,25 @@ h1 {
     border-style: inset;
 }
 
+.clear-delete-buttons button:active {
+    transform: scale(0.98);
+}
+
 .clear-btn:hover {
     background-color: #e5383b;
+}
+
+.clear-btn:active {
+    background-color: #d62828;
 }
 
 .delete-btn:hover {
     background-color: #9a99f2;
 }
 
+.delete-btn:active {
+    background-color: #7b7af2;
+}
 
 .button-grid {
     min-width: 424px;
@@ -144,13 +155,18 @@ h1 {
     border-width: 4px;
     border-color: #7bdff2;
     border-style: outset;
-    transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth effect */
+    transition: background-color 0.3s, transform 0.3s, border-style 0.3s;
 }
 
 .button-grid button:hover {
-    background-color: #7bdff2; /* Darken the color on hover */
+    background-color: #7bdff2;
     transform: scale(1.02); 
-    border-style: inset; /* Change border style on hover */
+    border-style: inset;
+}
+
+.button-grid button:active {
+    transform: scale(0.98);
+    background-color: #5ed0e6;
 }
 
 .division, .multiplication, .subtraction, .addition, .equals, .decimal {
@@ -164,12 +180,8 @@ h1 {
     background-color: #80ed99 !important;
 }
 
-.subtraction {
-    padding-bottom: 12px !important;
-}
-
-.division, .multiplication {
-    padding-bottom: 4px !important;
+.division:active, .multiplication:active, .subtraction:active, .addition:active {
+    background-color: #57e383 !important;
 }
 
 .equals {
@@ -181,6 +193,10 @@ h1 {
     background-color: #ffc15e !important;
 }
 
+.equals:active {
+    background-color: #ffb42f !important;
+}
+
 .decimal {
     background-color: #ffee99 !important;
     border-color: #ffe14c !important;
@@ -189,4 +205,8 @@ h1 {
 
 .decimal:hover {
     background-color: #ffe14c !important;
+}
+
+.decimal:active {
+    background-color: #ffd700 !important;
 }
