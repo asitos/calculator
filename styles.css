@@ -5,7 +5,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #dee2ff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace ;
 }
 
 h1 {
@@ -80,7 +80,7 @@ h1 {
 .input-history {
     margin-bottom: 4px;
     font-size: 28px;
-    padding-right: 8px;
+    letter-spacing: 20px;
 }
 
 .clear-delete-buttons {
@@ -88,7 +88,6 @@ h1 {
     align-items: center;
     justify-content: space-around;
     min-width: 424px;
-    /* background-color: aliceblue; */
 }
 
 .clear-btn, .delete-btn {
@@ -99,6 +98,7 @@ h1 {
     border-width: 4px;
     border-style: outset;
     transition: background-color 0.3s, transform 0.3s, border-style 0.3s;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .clear-btn {
@@ -158,6 +158,7 @@ h1 {
     border-color: #7bdff2;
     border-style: outset;
     transition: background-color 0.3s, transform 0.3s, border-style 0.3s;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .button-grid button:hover {
@@ -176,6 +177,7 @@ h1 {
     font-size: 42px !important; 
     background-color: #c7f9cc !important;
     border-color: #80ed99 !important;
+    padding-top: 8px;
 }
 
 .division:hover, .multiplication:hover, .subtraction:hover, .addition:hover {
