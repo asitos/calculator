@@ -30,4 +30,16 @@ function operate(a, b, operation) {
     }
 }
 
+function storeValue() {
+    // start here
+}
+
+const equals = document.querySelector(".equals");
+equals.addEventListener("click", storeValue);
+
 const inputField = document.querySelector(".input");
+inputField.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        storeValue();
+    }
+})
