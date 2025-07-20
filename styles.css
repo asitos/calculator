@@ -79,6 +79,7 @@ h1 {
 .input-history {
     margin-bottom: 4px;
     font-size: 28px;
+    padding-right: 8px;
 }
 
 .clear-delete-buttons {
