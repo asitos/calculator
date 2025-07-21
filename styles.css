@@ -214,3 +214,71 @@ h1 {
 .decimal:active {
     background-color: #ffd700 !important;
 }
+
+
+.simulated-hover {
+    background-color: #7bdff2;
+    transform: scale(1.02); 
+    border-style: inset;
+}
+
+.simulated-active {
+    transform: scale(0.98);
+    background-color: #5ed0e6;
+}
+
+/* Special cases for operator buttons */
+.division.simulated-hover, .multiplication.simulated-hover, 
+.subtraction.simulated-hover, .addition.simulated-hover {
+    background-color: #80ed99 !important;
+}
+
+.division.simulated-active, .multiplication.simulated-active, 
+.subtraction.simulated-active, .addition.simulated-active {
+    background-color: #57e383 !important;
+}
+
+/* Special case for equals button */
+.equals.simulated-hover {
+    background-color: #ffc15e !important;
+}
+
+.equals.simulated-active {
+    background-color: #ffb42f !important;
+}
+
+/* Special case for decimal button */
+.decimal.simulated-hover {
+    background-color: #ffe14c !important;
+}
+
+.decimal.simulated-active {
+    background-color: #ffd700 !important;
+}
+
+/* Special cases for clear-btn and delete-btn */
+.clear-btn.simulated-hover {
+    background-color: #e5383b !important;
+}
+
+.clear-btn.simulated-active {
+    background-color: #d62828 !important;
+}
+
+.delete-btn.simulated-hover {
+    background-color: #9a99f2 !important;
+}
+
+.delete-btn.simulated-active {
+    background-color: #7b7af2 !important;
+}
+
+/* Special case for button-grid buttons */
+.button-grid button.simulated-hover {
+    background-color: #7bdff2 !important;
+}
+
+.button-grid button.simulated-active {
+    background-color: #5ed0e6 !important;
+}
+
