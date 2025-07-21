@@ -81,6 +81,7 @@ h1 {
     margin-bottom: 4px;
     font-size: 28px;
     letter-spacing: 20px;
+    min-height: 34px;
 }
 
 .clear-delete-buttons {

@@ -15,7 +15,7 @@ function divide(a, b) {
         alert("Cannot divide by zero!");
         return NaN;
     }
-    return (a / b);
+    return (a / b).toFixed(4);
 }
 
 let a = null;
@@ -24,9 +24,12 @@ let operation = null;
 let currentInput = '';
 let inputHistory = '';
 let resultDisplayed = false;
+let operationJustPressed = false;
 
-function updateDisplay() {
-    document.querySelector(".input").value = currentInput;
+function updateDisplay(finalResult = null) {
+    if (finalResult !== null) {
+        document.querySelector(".input").value = finalResult;
+    }
     document.querySelector(".input-history").textContent = inputHistory;
 }
 
@@ -34,10 +37,15 @@ function appendToInput(value) {
     if (resultDisplayed) {
         currentInput = '';
         resultDisplayed = false;
+        operationJustPressed = false;
     }
     currentInput += value;
+    if (inputHistory === "0" && value !== '.') { // Avoid history like "05"
+        inputHistory = '';
+    }
     inputHistory += value;
-    updateDisplay();
+    document.querySelector(".input").value = currentInput;
+    document.querySelector(".input-history").textContent = inputHistory;
 }
 
 function clearInput() {
@@ -47,7 +55,9 @@ function clearInput() {
     currentInput = '';
     inputHistory = '';
     resultDisplayed = false;
-    updateDisplay();
+    document.querySelector(".input").value = currentInput;
+    document.querySelector(".input-history").textContent = inputHistory;
+    document.querySelector(".input").setAttribute("placeholder", "0");
 }
 
 function calculateResult() {
@@ -76,11 +86,13 @@ function calculateResult() {
 
         a = result;
         currentInput = result.toString();
-        updateDisplay();
+        updateDisplay(currentInput);
         resultDisplayed = true;
         operation = null;
         inputHistory = result.toString();
 
+        const inputField = document.querySelector(".input");
+        inputField.removeAttribute("placeholder");
         console.log("calculateResult called");
         console.log("a:", a, "currentInput:", currentInput, "operation:", operation, "inputHistory:", inputHistory);
     }
@@ -110,7 +122,8 @@ function handleOperation(op) {
     operation = op;
     inputHistory = a.toString() + op;
     currentInput = '';
-    updateDisplay();
+    document.querySelector(".input").value = currentInput;
+    document.querySelector(".input-history").textContent = inputHistory;
 
     console.log("handleOperation called with:", op);
     console.log("a:", a, "currentInput:", currentInput, "operation:", operation, "inputHistory:", inputHistory);
@@ -120,7 +133,8 @@ function deleteLastInput() {
     if (currentInput.length > 0) {
         currentInput = currentInput.slice(0, -1);
         inputHistory = inputHistory.slice(0, -1);
-        updateDisplay();
+        document.querySelector(".input").value = currentInput;
+        document.querySelector(".input-history").textContent = inputHistory;
     }
 }
 
